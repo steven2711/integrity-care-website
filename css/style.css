@@ -1,0 +1,484 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  opacity: 0.9;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  padding: 0 30px;
+  transition: 0.5s;
+}
+
+.navbar.top {
+  background: transparent;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  border-bottom: var(--primary) 2px solid;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar .logo {
+  font-weight: 400;
+}
+
+/* Hamburger */
+
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Click event */
+
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+/* Hamburger Animation */
+
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Menu wrap */
+
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 70px;
+  height: 70px;
+  padding: 1rem;
+  background: var(--overlay-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vh;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  color: white;
+  list-style: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header */
+
+.hero {
+  background: var(--hero-overlay-color);
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.hero .content h1 {
+  font-size: 5vh;
+}
+
+.hero .chevron {
+  margin-right: 10px;
+}
+
+.hero .content p {
+  font-size: 3vh;
+  max-width: 600px;
+  margin: 15px 0;
+}
+
+.hero .content .phone {
+  font-size: 5vh;
+}
+
+.hero::before {
+  content: "";
+  background: url("/images/home/hero.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+}
+
+/* Icons */
+
+.icons {
+  padding: 30px;
+}
+
+.icons h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.icons i {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Team */
+
+.team img {
+  max-height: 400px;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Pricing */
+
+.pricing h2 {
+  text-align: center;
+  font-size: 40px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.pricing h3 {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pricing .row {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.pricing .card {
+  width: 30%;
+  background: #fff;
+
+  border: 1px solid #ccc;
+  margin: 0 30px 30px;
+  transition: 0.3s;
+}
+
+.pricing .card-header {
+  text-align: center;
+
+  padding: 50px 10px;
+  background: linear-gradient(to right, #ff416c, var(--primary));
+  color: #fff;
+}
+
+.pricing .card-body {
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.pricing .card-body li {
+  line-height: 3rem;
+}
+
+.pricing .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+.pricing strong {
+  color: var(--primary);
+}
+
+/* Weight Loss */
+
+.weightloss .sub-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.weightloss .sub-column-1,
+.weightloss .sub-column-2 {
+  width: 40%;
+  margin: 10px;
+}
+
+.weightloss .sub-column-2 table {
+  width: 100%;
+  margin: 15px 0;
+  font-size: 18px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.weightloss .sub-column-2 table td {
+  padding: 20px 5px;
+}
+
+.weightloss .sub-column-2 table td:nth-child(odd) {
+  border-right: white 1px solid;
+}
+
+.weightloss .sub-column-2 table th {
+  border-bottom: white 1px solid;
+}
+
+/* Contact */
+
+.contact .column-2 > * {
+  margin: 5px 0;
+}
+
+.contact .column-2 span:first-of-type {
+  font-size: 30px;
+  color: var(--primary);
+}
+
+.contact .column-2 span {
+  font-size: 20px;
+}
+
+.contact iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: var(--primary);
+}
+
+.footer .social > * {
+  margin-right: 30px;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 800px) {
+  .pricing .card {
+    width: 80%;
+  }
+
+  .weightloss .sub-column-1,
+  .weightloss .sub-column-2 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+    height: 120px;
+  }
+
+  .navbar a {
+    padding: 10px 10px;
+    margin: 0 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-items {
+    flex-direction: column;
+  }
+
+  .flex-columns .column,
+  .flex-grid .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .team img {
+    width: 80%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 610px) {
+  .navbar {
+    display: none;
+  }
+
+  .hero .logo {
+    display: none;
+  }
+}
+
+@media (min-width: 611px) {
+  .menu-wrap {
+    display: none;
+  }
+}
