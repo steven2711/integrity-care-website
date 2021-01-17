@@ -32,7 +32,7 @@
             <div class="menu">
                 <div>
                     <div>
-                        <ul>
+                        <ul id="mobile-links">
                             <li><a href="#home">Home</a></li>
                             <li><a href="#services">Services</a></li>
                             <li><a href="#pricing">Pricing</a></li>
@@ -48,7 +48,7 @@
         <div class="content">
             <h1>Integrity Care of Middle Tennessee</h1>
             <p>Located in the heart of downtown Murfreesboro. We pride ourselves on treating every patient like a member of our own family.</p>
-            <p class="phone">(615) 624-9100</p>
+            <a href="tel:615-624-9100" class="phone">(615) 624-9100</a>
             <p>Schedule an appointment today!</p>
             <a href="https://mycw137.ecwcloud.com/portal19066/jsp/100mp/login_otp.jsp" class='btn' rel="noopener" target="_blank"><i class="fas fa-chevron-right chevron"></i>Patient Portal</a>
         </div>
@@ -57,33 +57,41 @@
         <section id="services" class="icons bg-light">
             <div class="flex-items">
                 <div>
-                    <i class="fas fa-running fa-2x"></i>
-                    <div>
-                        <h3>Physicals</h3>
-                        <p>Annual physicals, work physicals, sports physicals, camp physicals, DOT physicals, etc.</p>
+                    <div class="services-scroll-effect">
+                        <i class="fas fa-running fa-2x"></i>
+                        <div>
+                            <h3>Physicals</h3>
+                            <p>Annual physicals, work physicals, sports physicals, camp physicals, DOT physicals, etc.</p>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <i class="fas fa-vial fa-2x"></i>
-                    <div>
-                        <h3>Lab Services</h3>
-                        <p>Basic labs include sodium, potassium, potassium, calcium, glucose, thyroid and liver function tests.  Extended panels for inflammatory disorders, fatigue and endocrine disorders also available.
-                        </p>
-                        
+                    <div class="services-scroll-effect">
+                        <i class="fas fa-vial fa-2x"></i>
+                        <div>
+                            <h3>Lab Services</h3>
+                            <p>Basic labs include sodium, potassium, potassium, calcium, glucose, thyroid and liver function tests.  Extended panels for inflammatory disorders, fatigue and endocrine disorders also available.
+                            </p>
+                            
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <i class="fas fa-hospital-user fa-2x"></i>
-                    <div>
-                        <h3>Chronic Disease Management</h3>
-                        <p>Diabetes, high cholesterol/lipids, high blood pressure, thyroid disease, anxiety/depression, arthritis, sinus infections/allergies, asthma, skin disorders and more.</p>
+                    <div class="services-scroll-effect">
+                        <i class="fas fa-hospital-user fa-2x"></i>
+                        <div>
+                            <h3>Chronic Disease Management</h3>
+                            <p>Diabetes, high cholesterol/lipids, high blood pressure, thyroid disease, anxiety/depression, arthritis, sinus infections/allergies, asthma, skin disorders and more.</p>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <i class="fas fa-procedures fa-2x"></i>
-                    <div>
-                        <h3>Procedures</h3>
-                        <p>Cryotherapy (freezing), skin tag removal, skin biopsy, joint injections, sutures, and Botox injections over face and neck</p>
+                    <div class="services-scroll-effect">
+                        <i class="fas fa-procedures fa-2x"></i>
+                        <div>
+                            <h3>Procedures</h3>
+                            <p>Cryotherapy (freezing), skin tag removal, skin biopsy, joint injections, sutures, and Botox injections over face and neck</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -141,7 +149,7 @@
                         </div>   
                     </div>
             </div>
-            <h2>Call <strong>(615) 624-9100</strong> for more info on uninsured costs!</h2>
+            <h2>Call <br><a href="tel:615-624-9100"><strong>(615) 624-9100</strong></a> <br>for more info on uninsured costs!</h2>
         </section>
 
 
@@ -205,23 +213,23 @@
 
         <section id="team" class="team section-padding">
             <header class="section-header">
-                <h4>Who we are</h4>
                 <h2>Our Professional Team</h2>
                 <p>We look forward to meeting you!</p>
             </header>
             <div class="flex-items">
-                <div>
-                    <img src="images/team/Doc.jpg" alt="Doctor Tanzania Dooley, Physician" loading="lazy">
-                    <h4>Doctor Tanzania Dooley</h4>
-                    <p>Physician</p>
+                <div class="bio">
+                    <img src="images/team/Doc.jpg" alt="Doctor Tanzania Dooley, Physician" loading="lazy" class="team-scroll-effect">
+                    <h4>Dr. Tanny Dooley</h4>
+                    <h5>Physician</h5>
+                    <!-- <p>Dr. Dooley has been practicing medicine for over 20 years. She graduated from Mehary Medical College and Hapmton University. She also has trained in internal and pediatric medicine! Dr. Dooley and the Integrity Care staff strive to promote equality and diversity in healthcare. </p> -->
                 </div>
-                <div>
-                    <img src="images/team/Daniel.jpg" alt="Daniel Robinson, Head of Nutrition" loading="lazy">
+                <div class="bio">
+                    <img src="images/team/Daniel.jpg" alt="Daniel Robinson, Head of Nutrition" loading="lazy" class="team-scroll-effect">
                     <h4>Daniel Robinson</h4>
-                    <p>Head of Nutrition, Fitness, and Kinesiology</p>
+                    <h5>Head of Nutrition, Fitness, and Kinesiology</h5>
                 </div>
-                <div>
-                    <img src="images/team/Miya.jpg" alt="Miya Winans, Administration" loading="lazy">
+                <div class="bio">
+                    <img src="images/team/Miya.jpg" alt="Miya Winans, Administration" loading="lazy" class="team-scroll-effect">
                     <h4>Miya Winans</h4>
                     <p>Administration</p>
                 </div>
@@ -239,10 +247,12 @@
                     <div class="column-2 bg-light">
                         <h2>Contact</h2>
                         <h3>By Phone:</h3>
-                        <span>(615) 624-9100</span>
+                        <a href="tel:615-624-9100">(615) 624-9100</a>
                         <h3>Location:</h3>
-                        <span>615 N Highland Ave</span>
-                        <span>Murfreesboro, TN 37130</span>
+                        <address>
+                            615 N Highland Ave <br>
+                            Murfreesboro, TN 37130
+                        </address>
                     </div>
                 </div>
             </div>
@@ -263,9 +273,11 @@
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
 
-  <script src="js/lightbox.min.js"></script>
+  <script src="script.js"></script>
 
-    <script>
+  <!-- <script src="js/lightbox.min.js"></script> -->
+
+    <!-- <script>
         const navbar = document.getElementById('navbar');
         let scrolled = false;
 
@@ -306,6 +318,6 @@
                 $('html, body').animate(setAnimate, 800)
             }
         })
-    </script>
+    </script> -->
 </body>
 </html> 
