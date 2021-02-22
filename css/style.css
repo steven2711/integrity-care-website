@@ -272,6 +272,10 @@ img {
 
 /* Services */
 
+#services .flex-items {
+  margin: 30px 0;
+}
+
 /* Icons */
 
 .icons {
