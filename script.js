@@ -24,7 +24,6 @@ function toggleMenu() {
 const serviceScrollItems = document.querySelectorAll('.services-scroll-effect');
 const teamScrollItems = document.querySelectorAll('.team-scroll-effect');
 
-console.log(serviceScrollItems)
 
 window.addEventListener('scroll', handleScrollEffect);
 
