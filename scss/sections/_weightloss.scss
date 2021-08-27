@@ -1,0 +1,64 @@
+#weightloss {
+  .weightloss-heading {
+    background: url("../../images/home/weightloss.jpg") no-repeat center
+      center/cover;
+    background-attachment: fixed;
+    color: $text-color-light;
+
+    text-align: center;
+
+    .weightloss-heading-info {
+      background-color: $hero-overlay-color;
+
+      padding: 4rem 0;
+
+      @include for-small-tablet {
+        padding: 2rem 0;
+      }
+
+      h2 {
+        font-size: 3rem;
+        margin: 1rem;
+      }
+
+      p {
+        font-size: 2rem;
+        width: 50%;
+        margin: auto;
+
+        @include for-large-tablet {
+          width: 70%;
+        }
+
+        @include for-small-tablet {
+          width: 90%;
+        }
+
+        @include for-phone-only {
+          font-size: 1.5rem;
+        }
+      }
+
+      .weightloss-pricing {
+        color: $text-color-dark;
+      }
+    }
+  }
+
+  .weightloss-pricing {
+    padding: 6rem 4rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    @include for-small-tablet {
+      flex-direction: column;
+      padding: 4rem 2rem;
+    }
+
+    @include for-phone-only {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  }
+}
