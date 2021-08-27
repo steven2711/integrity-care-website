@@ -19,9 +19,23 @@
   }
 
   nav {
-    a {
-      &:hover {
+    li {
+      border: 1px solid transparent;
+      padding: 0.7rem 0;
+      margin: 0 0.5rem;
+
+      &:hover:not(:last-child) {
         border-bottom: $text-color-light 2px solid;
+      }
+
+      &:last-child {
+        background-color: $secondary;
+        border: 2px solid $secondary;
+        border-radius: 10px;
+
+        i {
+          margin-right: 1rem;
+        }
       }
     }
   }
@@ -169,6 +183,22 @@
   margin: 2rem 0;
   padding: 1rem;
 
+  &:last-child {
+    background-color: $primary;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 5rem;
+
+    @include for-phone-only {
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    i {
+      margin-right: 1rem;
+    }
+  }
+
   @include for-phone-only {
     font-size: 1.5rem;
     margin: 1rem 0;
@@ -193,7 +223,7 @@
   // }
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 1200px) {
   .navbar {
     display: none;
   }
