@@ -1,0 +1,22 @@
+#pricing {
+  text-align: center;
+  padding: 6rem 4rem;
+
+  @include for-large-tablet {
+    padding: 2rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+
+    @include for-small-tablet {
+      flex-direction: column;
+    }
+  }
+}

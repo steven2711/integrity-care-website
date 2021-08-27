@@ -1,0 +1,97 @@
+.card {
+  background: #fff;
+  border-radius: 15px;
+  width: 33.33%;
+  margin: 0 2rem;
+  transition: 0.3s;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  @include for-large-tablet {
+    margin: 0 1rem;
+  }
+
+  @include for-small-tablet {
+    width: 70%;
+    margin: 1rem auto;
+  }
+
+  @include for-phone-only {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+  }
+
+  .card-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    border-radius: 15px 15px 0 0;
+    background: linear-gradient(to right, #ff416c, $primary);
+    color: #fff;
+
+    h3 {
+      font-size: 4rem;
+      font-weight: bold;
+      text-align: center;
+
+      @include for-large-tablet {
+        font-size: 3rem;
+      }
+
+      span {
+        font-size: 2rem;
+
+        @include for-large-tablet {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .card-body {
+    padding: 1rem 2rem;
+
+    h4 {
+      font-size: 2rem;
+      text-transform: uppercase;
+
+      @include for-large-tablet-1500 {
+        font-size: 1.7rem;
+      }
+    }
+
+    ul {
+      margin: 1.5rem 0;
+      padding: 0 2rem 0 4rem;
+      list-style: circle;
+
+      @include for-large-tablet-1500 {
+        padding: 1rem;
+        margin: 0;
+      }
+
+      @include for-small-tablet {
+        padding-left: 4rem;
+      }
+
+      @include for-phone-only {
+        padding: 1rem;
+      }
+
+      li {
+        line-height: 2.5rem;
+        font-size: 1.4rem;
+        text-align: left;
+
+        @include for-large-tablet-1500 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  strong {
+    color: var(--primary);
+  }
+}

@@ -1,0 +1,50 @@
+%btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.btn {
+  @extend %btn;
+  color: $text-color-light;
+  background-color: $primary;
+}
+
+.btn-continue {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0.5rem;
+  left: 48%;
+
+  @include for-small-tablet {
+    left: 46.5%;
+  }
+
+  @include for-phone-only {
+    left: 45.5%;
+  }
+
+  i {
+    font-size: 4rem;
+    animation: bounce 1s infinite alternate;
+
+    @include for-phone-only {
+      font-size: 2.3rem;
+    }
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}

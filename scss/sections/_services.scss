@@ -1,0 +1,53 @@
+#services {
+  padding: 9rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+
+  @include for-large-tablet {
+    padding: 5rem 3rem;
+  }
+
+  @include for-small-tablet {
+    padding: 5rem 1rem;
+  }
+}
+.service-card {
+  width: 20%;
+  margin: 0 1rem;
+
+  @include for-large-tablet {
+    width: 20rem;
+    margin-bottom: 4rem;
+  }
+
+  @include for-small-tablet {
+    width: 50%;
+  }
+
+  @include for-phone-only {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+
+  ul {
+    li {
+      margin: 0.5rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  i {
+    background-color: $primary;
+    font-size: 2rem;
+    color: $text-color-light;
+    padding: 2rem;
+    border-radius: 50%;
+  }
+}
