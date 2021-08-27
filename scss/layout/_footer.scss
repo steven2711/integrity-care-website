@@ -5,20 +5,13 @@
   justify-content: center;
   text-align: center;
   height: 200px;
-}
+  background-color: $primary;
 
-.footer a {
-  color: #fff;
-}
+  a {
+    color: #fff;
 
-.footer a:hover {
-  color: $primary;
-}
-
-.footer .social > * {
-  margin-right: 30px;
-}
-
-footer .p-link {
-  color: $primary;
+    &:hover {
+      color: $primary;
+    }
+  }
 }
