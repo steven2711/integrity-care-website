@@ -6,6 +6,15 @@
   text-align: center;
   .weightloss-background-cover {
     background-color: $hero-overlay-color;
+    padding: 0 4rem 5rem;
+
+    @include for-large-tablet {
+      padding: 0 2rem 5rem;
+    }
+
+    @include for-phone-only {
+      padding: 0 1rem 2rem;
+    }
 
     .weightloss-heading-info {
       padding: 4rem 0;
@@ -39,7 +48,6 @@
     }
 
     .weightloss-pricing {
-      padding: 0 4rem 4rem;
       color: $text-color-dark;
       text-align: center;
       display: flex;
@@ -47,12 +55,6 @@
 
       @include for-small-tablet {
         flex-direction: column;
-        padding: 0 2rem;
-      }
-
-      @include for-phone-only {
-        flex-direction: column;
-        padding: 1rem;
       }
     }
   }
