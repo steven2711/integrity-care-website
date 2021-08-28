@@ -1,17 +1,91 @@
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 200px;
   background-color: $primary;
+  color: $text-color-light;
+  padding: 2rem 4rem;
+  height: auto;
 
-  a {
-    color: #fff;
+  @include for-small-tablet {
+    padding: 2rem;
+  }
 
-    &:hover {
-      color: $primary;
+  .footer-content {
+    display: flex;
+
+    justify-content: space-evenly;
+
+    @include for-phone-only {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-title {
+      text-align: center;
+      padding: 0 1rem;
+      div {
+        @include for-phone-only {
+          margin-bottom: 2rem;
+        }
+        span {
+          font-size: 1.3rem;
+        }
+
+        p {
+          font-size: 2rem;
+          margin: 0.7rem 0;
+
+          @include for-small-tablet {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .footer-links {
+      @include for-phone-only {
+        margin-bottom: 2rem;
+      }
+      ul {
+        li {
+          margin-bottom: 1rem;
+
+          font-size: 1.3rem;
+
+          a {
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-socials {
+      font-size: 1.2rem;
+
+      @include for-phone-only {
+        margin-bottom: 2rem;
+      }
+
+      a {
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  .builtby {
+    text-align: center;
+    margin-top: 2rem;
+
+    @include for-small-tablet {
+      margin-top: 1rem;
+    }
+
+    a {
+      color: $secondary;
+      font-size: 1.5rem;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
