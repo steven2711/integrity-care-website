@@ -10,7 +10,11 @@
 
       header {
         text-align: center;
-        padding: 5rem 2rem;
+        padding: 5rem;
+
+        @include for-phone-only {
+          padding: 5rem 2rem;
+        }
         h2 {
           font-size: 3rem;
           margin: 1rem 0;
